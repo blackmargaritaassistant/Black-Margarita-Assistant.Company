@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Black Margarita Assistant Company</title>
+<style>
+/* ================== Global Styles ================== */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+}
+a { text-decoration: none; color: inherit; }
+
+/* ================== Header ================== */
+header {
+    background-color: rgba(0,0,0,0.85);
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #550055;
+}
+header h1 {
+    color: #f0f0f0;
+}
+nav a {
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover { color: #cc99ff; }
+
+/* ================== Hero Section ================== */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1605902711622-cfb43c443f24') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.hero h2 { font-size: 3em; margin: 0; color: #cc99ff; }
+.hero p { font-size: 1.3em; margin-top: 10px; max-width: 600px; }
+.hero button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    background-color: #550055;
+    color: #f0f0f0;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.hero button:hover { background-color: #cc99ff; color: #0d0d0d; }
+
+/* ================== Services Section ================== */
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #111;
+}
+.service-card {
+    background-color: rgba(30,0,30,0.8);
+    border-radius: 12px;
+    padding: 30px;
+    width: 300px;
+    margin: 20px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+.service-card:hover {
+    transform: translateY(-10px);
+    background-color: rgba(50,0,50,0.9);
+}
+.service-card h3 { color: #cc99ff; margin-top: 0; }
+
+/* ================== Booking Form ================== */
+#booking {
+    background-color: #0d0d0d;
+    padding: 50px 20px;
+    text-align: center;
+}
+#booking h2 { color: #cc99ff; margin-bottom: 30px; }
+form {
+    max-width: 500px;
+    margin: auto;
+    background-color: rgba(20,0,20,0.85);
+    padding: 30px;
+    border-radius: 12px;
+}
+form input, form select, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: none;
+}
+form button {
+    background-color: #550055;
+    color: #f0f0f0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+form button:hover { background-color: #cc99ff; color: #0d0d0d; }
+
+/* ================== Chatbot ================== */
+#chatbot {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: rgba(30,0,30,0.95);
+    border-radius: 12px;
+    overflow: hidden;
+    font-size: 0.9em;
+}
+#chatbot-header {
+    background-color: #550055;
+    padding: 10px;
+    color: #f0f0f0;
+    cursor: pointer;
+}
+#chatbot-messages {
+    height: 200px;
+    padding: 10px;
+    overflow-y: auto;
+    display: none;
+    background-color: #1a001a;
+}
+#chatbot-input {
+    display: none;
+    padding: 10px;
+    border-top: 1px solid #550055;
+}
+#chatbot-input input {
+    width: 70%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+}
+#chatbot-input button {
+    width: 25%;
+    background-color: #cc99ff;
+    border: none;
+    border-radius: 6px;
+    color: #0d0d0d;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* ================== Footer ================== */
+footer {
+    background-color: #0d0d0d;
+    text-align: center;
+    padding: 30px 20px;
+    border-top: 1px solid #550055;
+}
+
+/* ================== Responsive ================== */
+@media (max-width: 768px) {
+    .services { flex-direction: column; align-items: center; }
+    nav a { margin-left: 10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+    <h1>Black Margarita Assistant Company</h1>
+    <nav>
+        <a href="#services">خدمات ما</a>
+        <a href="#booking">رزرو تکت</a>
+        <a href="#hotel">رزرو هوتل</a>
+        <a href="#contact">تماس با ما</a>
+    </nav>
+    <div style="position:absolute; top:20px; right:20px; width:30px; height:30px; background-color:#000; border-radius:50%; border:2px solid #cc99ff;"></div> <!-- گیلاس مشکی -->
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <h2>تجربه‌ای بی‌نظیر از خدمات آنلاین لوکس در سراسر جهان</h2>
+    <p>فروش تکت، رزرو هوتل، وقت ملاقات سفارت و سایر خدمات آنلاین</p>
+    <button>شروع کنید</button>
+</section>
+
+<!-- Services Section -->
+<section class="services" id="services">
+    <div class="service-card">
+        <h3>فروش تکت هوایی</h3>
+        <p>به راحتی تکت خود را برای هر نقطه جهان رزرو کنید.</p>
+    </div>
+    <div class="service-card">
+        <h3>رزرو هوتل</h3>
+        <p>هوتل‌های لوکس و مدرن را با بهترین قیمت رزرو کنید.</p>
+    </div>
+    <div class="service-card">
+        <h3>وقت ملاقات سفارت</h3>
+        <p>به آسانی وقت ملاقات در سفارتخانه‌ها را رزرو نمایید.</p>
+    </div>
+    <div class="service-card">
+        <h3>سایر خدمات آنلاین</h3>
+        <p>تمام خدمات دیگر آنلاین را با امنیت و سرعت بالا دریافت کنید.</p>
+    </div>
+</section>
+
+<!-- Booking Form -->
+<section id="booking">
+    <h2>رزرو خدمات</h2>
+    <form onsubmit="alert('رزرو شما ثبت شد! (نمونه)'); return false;">
+        <input type="text" placeholder="نام کامل" required>
+        <input type="email" placeholder="ایمیل" required>
+        <select required>
+            <option value="">نوع سرویس</option>
+            <option value="ticket">تکت هوایی</option>
+            <option value="hotel">رزرو هوتل</option>
+            <option value="embassy">وقت ملاقات سفارت</option>
+        </select>
+        <input type="date" required>
+        <button type="submit">رزرو و پرداخت</button>
+    </form>
+</section>
+
+<!-- Chatbot -->
+<div id="chatbot">
+    <div id="chatbot-header" onclick="toggleChat()">پشتیبانی آنلاین</div>
+    <div id="chatbot-messages"></div>
+    <div id="chatbot-input">
+        <input type="text" id="userMessage" placeholder="پیام خود را بنویسید">
+        <button onclick="sendMessage()">ارسال</button>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer id="contact">
+    <p>&copy; 2026 Black Margarita Assistant Company | تمام حقوق محفوظ است</p>
+    <p>ایمیل: kabuldamaknetclub@gmail.com | تماس افغانستان: 0782479150</p>
+</footer>
+
+<script>
+// ================= Chatbot =================
+function toggleChat(){
+    let messages = document.getElementById('chatbot-messages');
+    let input = document.getElementById('chatbot-input');
+    if(messages.style.display === 'none' || messages.style.display === ''){
+        messages.style.display = 'block';
+        input.style.display = 'flex';
+    } else {
+        messages.style.display = 'none';
+        input.style.display = 'none';
+    }
+}
+
+function sendMessage(){
+    let userMsg = document.getElementById('userMessage').value;
+    if(userMsg.trim() === '') return;
+    let messagesDiv = document.getElementById('chatbot-messages');
+    let userDiv = document.createElement('div');
+    userDiv.textContent = 'شما: ' + userMsg;
+    userDiv.style.marginBottom = '10px';
+    messagesDiv.appendChild(userDiv);
+
+    let botDiv = document.createElement('div');
+    botDiv.textContent = 'پشتیبانی: برای اطلاعات بیشتر لطفاً فرم رزرو را تکمیل کنید.';
+    botDiv.style.marginBottom = '10px';
+    botDiv.style.color = '#cc99ff';
+    messagesDiv.appendChild(botDiv);
+
+    messagesDiv.scrollTop = messagesDiv.scrollHeight;
+    document.getElementById('userMessage').value = '';
+}
+</script>
+
+</body>
+</html>
